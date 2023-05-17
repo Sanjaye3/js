@@ -1,0 +1,71 @@
+
+// let class = "javascript";
+var class2="html";
+const class3 ="css";
+
+
+
+console.log("this is the print statement");
+console.log(new Date().toLocaleDateString());
+console.log(new Date().toLocaleTimeString());
+
+
+
+
+// variables are data containers
+
+
+
+let name = "sanjaye";
+let value = 100;
+
+console.log(name);
+
+// data types =>
+
+
+
+console.log( typeof(100) );
+//  number
+console.log(typeof("sanjaye") );
+// string
+console.log(typeof(true));
+// boolean
+console.log(1==1);
+console.log(typeof(1==1));
+// boolean
+console.log(typeof(undefined));
+// undefined
+console.log(typeof(null));
+// object
+
+
+// arithmetic operators
+let x = 10;
+
+let y = 5;
+
+let z = x + y;
+
+console.log(z);
+
+// assignment operator
+
+let a = 2;
+
+// addition assignment operator
+a += 10;
+a = a + 10 ;
+console.log(a);
+
+
+let b = "3";
+let c = 3;
+// equal to 
+// console.log( b==c );  
+console.log( b==c );
+// === equal value and equal data type
+console.log(b === c);
+ 
+
+ 

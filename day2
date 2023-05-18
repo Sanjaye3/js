@@ -1,0 +1,156 @@
+console.log("day2")
+
+
+
+
+let array = [10,20,30];
+let array1 = ["dell","hp"]
+// console.log(typeof array);
+console.log(array1);
+
+
+let object = {
+
+    name:"sanjaye",
+    designation:"sd",
+    location:"chennai",
+}
+
+console.log(typeof object);
+console.log(object.name);
+
+// type coercion => implicit type conversion
+let num1 = 10;
+let num2 = "20";
+const sum = (num1 + num2) 
+console.log(sum);
+
+
+// explicit type conversion 
+
+let num3=[10,20,30,40,44];
+console.log(typeof String(num3));
+
+
+let num4 = "25";
+console.log(typeof Number(num4));
+
+
+// let a= 1;
+// let b= 2;
+
+// function sum(a,b)  {
+     
+//     console.log(a+b);
+// }
+
+// sum(1,2);
+
+// function sum(a,b){
+    
+//     console.log(a+b);
+// }
+
+// sum(1,2)
+
+
+// function mul(){
+//     let a = 4;
+//     let b = 1;
+    
+//     console.log(a*b);
+// }
+
+
+// mul()
+
+
+
+// JSON
+
+// javascript object notation
+
+// it is a format for transporting data.
+
+// json is used for transporting data from a server to a client.
+
+
+// object
+// let object1 = {
+
+//     name:"sanjaye",
+//     designation:"sd",
+//     location:"chennai",
+// }
+
+
+// // array of objects
+
+// let object2 = [
+//     {
+//         name:"sanjaye",
+//     designation:"sd",
+//     location:"chennai",
+//     },
+//     {
+//         name:"sanjaye",
+//     designation:"sd",
+//     location:"chennai",
+//     },
+//     {
+//         name:"sanjaye",
+//     designation:"sd",
+//     location:"chennai",
+//     }
+// ]
+
+
+// // objects of objects
+
+// let object3= {
+//     {
+//         name:"sanjaye",
+//     designation:"sd",
+//     location:"chennai",
+//     },
+//     {
+//         name:"sanjaye",
+//     designation:"sd",
+//     location:"chennai",
+//     },
+//     {
+//         name:"sanjaye",
+//     designation:"sd",
+//     location:"chennai",
+//     },
+// }
+
+
+const obj = [
+
+    {
+        brand:"apple",
+        model:"macbook air"
+    },
+    {
+        brand:"dell",
+        model:"inspiron"
+    },
+    {
+        brand:"hp",
+        model:"pavillion"
+    },
+
+]
+        //   initalizatiion, test condition ,increment/decrement
+// for (i=0; i<obj.length; i++) {
+//     console.log(obj);
+// }
+
+obj.forEach((item) => {
+    for(let key in item){
+        console.log(item[key]);
+    }
+})
+
+// array of objects => print the entire json and print the values only

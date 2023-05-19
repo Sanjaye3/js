@@ -1,0 +1,96 @@
+// const { ServerResponse } = require("http");
+
+function example(){
+    console.log("this is function");
+}
+
+// example();
+
+
+
+function  city(){
+    let cityname="chennai";
+    return cityname;
+}
+
+ 
+// console.log(city());
+
+
+
+function food(a,b){
+    // console.log(dish);
+    console.log("booked food" + " " + a + " " + b);
+}
+
+
+// food("idly","chutney");
+// food("dosa","chutney");
+
+
+function sum(a=1,b=2){
+    
+    console.log(a+b);
+}
+// sum();
+// sum(10,20);
+
+
+
+
+// XMLHttpRequest => shortly known as XHR
+// ajax based concept to fetch the data.
+
+// 1. initialise a xmlHttpRequest
+
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+// 2. send the request to the Server
+
+    xhr.send();
+
+
+// 3. setup listeners to process the request
+
+    // xhr.onload = function() {
+    //     console.log(this.response);
+    // }
+ 
+
+    // xhr.onload = function() {
+    //     // provide the data if my request lies in  the status code betweeen 200 and 300
+
+    //     if(xhr.status >= 200 && xhr.status <= 300){
+    //         let data = JSON.parse(this.response)
+    //         console.log(data);
+    //     }
+    //     else{
+    //         console.log("data is not available");
+    //     }
+    // }
+
+
+
+    xhr.onload = function(){
+        if(xhr.status >= 200 && xhr.status <= 300){
+                    let data = JSON.parse(this.response);
+                     for (i = 0; i < data.length; i++){
+                        console.log(`id:${data[i].id}
+                                    name:${data[i].name}
+                                    email:${data[i].email}
+                                    street:${data[i].address.street}
+                                    city:${data[i].address.city}`
+                                    //   templateliteral  ${data[i].name}        
+                        
+                                    );
+                     }
+                }
+        else{
+             console.log("data is not available");
+           }
+    }
+
+
+    // template literal `string text number symbols ${}}`
+
+    

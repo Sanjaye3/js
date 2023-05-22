@@ -1,0 +1,80 @@
+
+
+// anonymous function => these are the function which do not have name
+
+ let sum = function(){
+    // console.log("this is the anonymous function");
+ };
+
+//  sum()
+sum()
+
+
+let sum1 = function(num1,num2){
+    let add = num1 + num2;
+    console.log(add);
+}
+
+// sum1(1,2)
+
+let sum2 = function(num1,num2){
+    let add = num1 + num2;
+    return add;
+}
+// console.log(sum2(10,20));
+// sum2(10,20)
+
+// iife => immediately invoked function 
+// this is the optimized version
+
+// (function(){
+//     console.log("this is iife function");
+// }) ();
+
+
+
+// arrow function
+
+const sum5 = (num1,num2) => {
+    console.log(num1 + num2);
+}
+
+// sum5(100,30)
+
+
+const arrowf = () =>{
+    console.log("this is arrow function");
+}
+
+// arrowf()
+
+const data =(id,name,gender) =>{
+    ({"id":id,"name":name,"gender":gender})
+};
+
+// console.log(data(1,"sanjaye","male"));
+
+
+let obj={
+    name:"sanjaye",
+    gender:"male",
+    city:"chennai"
+};
+
+let display=(obj) => {
+    console.log(obj);
+}
+
+
+// display(obj);
+
+
+let name = "sanjaye";
+if(name === "sanjaye"){
+    let department ="cs";
+    var clg = "anna university";
+    console.log(department);
+}
+console.log(name);
+
+console.log(clg);

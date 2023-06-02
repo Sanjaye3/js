@@ -89,7 +89,7 @@ function handleName(name,cb) {
 
 // callback hell => it is  nesting of multiple independent function on inside another.
 
-let  time = 1000;
+// let  time = 1000;
 
 // raisedough
 // doughrolled
@@ -98,57 +98,91 @@ let  time = 1000;
 // bakepizza
 // deliverpizza
 
-function raisedough(cb){
-    console.log("waiting for dough");
+// function raisedough(cb){
+//     console.log("waiting for dough");
+//     setTimeout(() => {
+//         console.log("dough is ready");
+//         cb();
+//     }, 3 * time);
+// }
+
+
+// function rolldough(cb){
+//     console.log("rolling dough");
+//     setTimeout(() => { 
+//         console.log("dough is rolled");
+//                 cb();
+//             }, 3*time);
+// }
+
+
+// function sauce(cb) {
+//     console.log("preparing sauce");
+//     setTimeout(() => {
+//         console.log("sauce is ready");
+//         cb();
+//     }, 3*time);
+// }
+
+
+// function bake(cb){
+//     console.log("baking the pizza");
+//     setTimeout(() => {
+//         console.log("pizza is ready");
+//         cb();
+//     },3*time);
+// }
+
+
+// function delivery(){
+//     console.log("pizza is delivered");
+// }
+
+
+
+
+// raisedough(() => {
+//     rolldough(() => {
+//         sauce(() => {
+//             bake(() => {
+//                 delivery(() => {
+//                     console.log("pizza is deliverd to the customer");
+//                 })
+//             })
+//         })
+//     })
+// })
+
+
+// let arr =[1,3,5,7,9];
+
+
+// for(let i = 0; i < arr.length; i++){
+//     sort(a,b) => b-a;
+// }
+// console.log(arr);
+
+const countdown = document.querySelector(".countdown");
+
+let time = 5;
+
+
+countdown.innerText = time--;
     setTimeout(() => {
-        console.log("dough is ready");
-        cb();
-    }, 3 * time);
-}
-
-
-function rolldough(cb){
-    console.log("rolling dough");
-    setTimeout(() => { 
-        console.log("dough is rolled");
-                cb();
-            }, 3*time);
-}
-
-
-function sauce(cb) {
-    console.log("preparing sauce");
-    setTimeout(() => {
-        console.log("sauce is ready");
-        cb();
-    }, 3*time);
-}
-
-
-function bake(cb){
-    console.log("baking the pizza");
-    setTimeout(() => {
-        console.log("pizza is ready");
-        cb();
-    },3*time);
-}
-
-
-function delivery(){
-    console.log("pizza is delivered");
-}
+        countdown.innerText = time--;
+        setTimeout(() => {
+            countdown.innerText = time--;
+            setTimeout(() => {
+                countdown.innerText = time--;
+                setTimeout(() => {
+                    countdown.innerText = time--;
+                    setTimeout(() => {
+                        countdown.innerText = "happy weekend";
+                },1000)
+            },1000)
+        },1000)
+    },1000)
+    },1000)
 
 
 
-
-raisedough(() => {
-    rolldough(() => {
-        sauce(() => {
-            bake(() => {
-                delivery(() => {
-                    console.log("pizza is deliverd to the customer");
-                })
-            })
-        })
-    })
-})

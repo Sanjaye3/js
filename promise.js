@@ -1,4 +1,6 @@
 // promise is a way to achieve asynchronous operation in js 
+import fetch from "node-fetch";
+const { request } = require("http");
 
 // state - 
 
@@ -72,16 +74,16 @@
 // })
 
 
-let cleanroom = true;
+// let cleanroom = true;
 
-const promisetocleanroom = new Promise((one, two) =>{
-    if(cleanroom){
-        one("cleaned");
-    }
-    else{
-        two("not cleaned")
-    }
-})
+// const promisetocleanroom = new Promise((one, two) =>{
+//     if(cleanroom){
+//         one("cleaned");
+//     }
+//     else{
+//         two("not cleaned")
+//     }
+// })
 
 // console.log(promisetocleanroom);
 
@@ -90,8 +92,184 @@ const promisetocleanroom = new Promise((one, two) =>{
 // console.log(room)).catch((err) => console.log(err))
 
 
-promisetocleanroom.then(function (fromresolved) {
-    console.log("room is " + fromresolved);
-}).catch(function(fromrejected) {
-    console.log("room is " + fromrejected);
-})
+// promisetocleanroom.then(function (fromresolved) {
+//     console.log("room is " + fromresolved);
+// }).catch(function(fromrejected) {
+//     console.log("room is " + fromrejected);
+// })
+
+
+
+// let promise = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         let data = 10;
+//         resolve(data);
+//     }, 1000);
+// })
+
+// promise.then((result) => {
+//      result = result*2;
+//     console.log(result);
+// })
+// .then((result) => {
+//     result = result*4;
+//     console.log(result);
+// })
+// .then((result) => {
+//     result = result*8;
+//     console.log(result);
+// })
+// .catch((error) =>{
+//     console.log(error);
+// })
+// .finally(() =>{
+//     console.log("this is finally");
+// })
+
+// promise.all 
+// it is a method that takes list of elements and returns a promise
+// resolve if all the promises are true.
+// if any of the promise gets rejected then this also gets rejected. 
+
+// Promise.all([promise1,promise2,promise3])
+
+
+
+
+
+// const promise1 = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         console.log("this is the first promise to be resolved");
+//         resolve(10);
+//     },2000)
+// })
+
+// const promise2 = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         console.log("this is the  second promise to be resolved");
+//         resolve(20);
+//     },2000)
+// })
+
+// const promise3 = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         console.log("this is the third promise to be resolved");
+//         resolve(30);
+//     },2000)
+// })
+
+// const promise4 = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         console.log("this is the fourth promise to be resolved");
+//         resolve(40);
+//     },2000)
+// })
+
+// const promise5 = new Promise((resolve, reject) =>{
+//     setTimeout(() =>{
+//         console.log("this is the first promise to be resolved");
+//         resolve(50);
+//     },2000)
+// }) 
+
+// Promise.all([promise1, promise2, promise3, promise4, promise5]) .then(results =>{
+//     console.log("results: " + results)
+//     let num = 250;
+//     console.log(num);
+// })
+
+
+
+// async and await
+
+
+// it is way to handle asynchronous operation in json
+
+// they are built on top of promise.
+
+// async => async keyword should be placed in front of the function keyword
+// it returns a promise
+
+
+// await => to access the value reutrned from async
+
+
+// async function add(a,b){}
+
+
+let promise1 = new Promise((resolve,reject) => {
+
+        setTimeout(() => resolve("promise is resolved"),10000);
+});
+
+
+async function asyncfunc(){
+
+       let result = await promise1;
+
+       console.log(result);
+       console.log("helloworld");
+}
+
+
+// asyncfunc()
+
+
+let promise2 = new Promise((resolve,reject) => {
+
+    // setTimeout(() => resolve("promise is resolved"),10000);
+
+    resolve(40);
+});
+
+let promise3 = new Promise((resolve,reject) => {
+
+    
+
+    resolve(50);
+});
+
+
+async function asyncfunc1(){
+    let result1 = await promise1;
+    let result2 = await promise2;
+    let result3 = await promise3;
+
+
+
+    console.log(result1);
+    console.log(result2);
+    console.log(result3);
+}
+
+
+// asyncfunc1()
+
+
+
+// fetch("url")
+// it provides a global fetch method that is ready to get the data/information across the network in a asynchoronous way.
+// it returns promise.
+// .then()
+// .catch()
+
+
+// fetch is a newer standard for dealing with http request.
+// get,put,delete,post,patch
+
+
+
+// function display(){
+//     fetch("https://reqres.in/api/users").then((res) =>res.json())
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err))
+// }
+
+function display(){
+    fetch("https://reqres.in/api/users").then((res) =>console.log(res));
+    
+}
+
+
+display()
+

@@ -1,0 +1,31 @@
+import "./styles.css";
+
+export default function App() {
+  // above return normal js
+  const name = "sanjaye";
+  const number = 3;
+  return (
+    // inside return jsx
+    // jsx=> javascript xml
+    <div className="App">
+      <Welcome name="midhin" />
+      <Welcome name="priyadarshini" />
+    </div>
+  );
+}
+
+// 1. component name should with a capital letter
+// 2. there should be a return
+
+function Welcome(props) {
+  let day = "friday";
+  console.log(props);
+  return (
+    <div>
+      <h1>this is the first session in react</h1>
+      <h2> Introduction to react</h2>
+      <h2> hello,{props.name}</h2>
+      <p> this is {day} </p>
+    </div>
+  );
+}

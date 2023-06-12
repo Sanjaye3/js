@@ -1,0 +1,49 @@
+import "./styles.css";
+import { useState } from "react";
+export default function App() {
+  return (
+    <div className="App">
+      <Counter />
+      <Counterr />
+    </div>
+  );
+}
+
+function Counterr() {
+  let like = 0;
+  let dislike = 0;
+  return (
+    <div>
+      <button
+        onClick={() => {
+          like = like + 1;
+          console.log(like, "like");
+        }}
+      >
+        Likes {like}
+      </button>
+
+      <button
+        onClick={() => {
+          dislike = dislike + 1;
+          console.log(dislike, "dislike");
+        }}
+      >
+        disLikes {dislike}
+      </button>
+    </div>
+  );
+}
+
+function Counter() {
+  const [like, setLike] = useState(0);
+  // const[state,setState] = useState(initialvalue);
+  const [dislike, setDisLike] = useState(0);
+  return (
+    <div>
+      <button onClick={() => setLike(like + 1)}> 👍{like} </button>
+
+      <button onClick={() => setDisLike(dislike + 1)}>👎{dislike} </button>
+    </div>
+  );
+}

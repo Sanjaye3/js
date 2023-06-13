@@ -1,0 +1,35 @@
+import logo from './logo.svg';
+import './App.css';
+import { Msg,Namedimports } from './Msg';
+import { useState } from 'react';
+
+function App() {
+  const names = ["Sanjaye","Midhin", "Priyadarshini","others"];
+  return (
+    <div className="App">
+      hi all
+        {names.map ((name) => <Msg name={name}/> ) }
+        < Namedimports />
+        <ColorBox />
+    </div>
+  );
+}
+
+function ColorBox() {
+  // const[state,setState] = useState(initialvalue);
+  const [color,setColor] =  useState("red");
+   const styles ={
+    background:color,
+    width: "1000px",
+    height: "200px",
+   }
+  return(
+    <div>
+      <input type="text" style={styles} placeholder="enter a color" onChange={(event) => setColor(event.target.value)}></input>
+    </div>
+  )
+}
+
+
+
+export default App;

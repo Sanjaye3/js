@@ -132,3 +132,13 @@ db.movies.find({}).sort({name:1}).limit(2)
 
 // skip first 2 movies
 db.movies.find({}).sort({name:1}).skip(2)
+
+// updateone
+db.movies.updateOne({"name":"Baahubali"},{$set:{rating:5.5}});
+
+
+// updateMany
+db.movies.updateMany({},{$set:{rating:5.5}});
+
+// deleteone
+db.movies.deleteOne({"name" : "Baahubali"});

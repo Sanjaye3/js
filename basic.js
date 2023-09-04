@@ -6,7 +6,7 @@ console.log(sum)
 console.log(num1*num2);
 
 // print statement
-
+ 
 console.log("")
 // == equal to
 // === equal to and equal type
@@ -33,3 +33,38 @@ else{
 }
 
  
+
+// primitive data types - the predefined data types that are provided by js. eg- string,number,boolean,undefined,null
+
+
+// non primitive data types- these are the datatypes that are derived from the peimitive data types.
+
+// eg- Array,object 
+
+// array- [1,2,3,4,5] array is a collection of values, when you have requirement to store a group of values.
+
+// object- object is an instance and have key value pair and can be accessed by dot operator.
+
+
+// let object = {
+//     name:"sanjaye",
+//     designation:"sd",
+//     gender:"male"
+// }
+
+
+// object.gender
+
+
+
+// function is a block of code,that is executed once when you call the function.
+
+
+ 
+
+function sum(){
+    
+    console.log("today is 04/09");
+}
+
+sum()
